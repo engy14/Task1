@@ -119,8 +119,6 @@ public class TGHGenerator {
 		this.message = message;
 	}
 
-
-
 	public Long getId() {
 		return id;
 	}

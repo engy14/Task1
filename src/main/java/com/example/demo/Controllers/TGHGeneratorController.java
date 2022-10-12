@@ -35,9 +35,7 @@ import com.example.demo.Services.RSB_SubsDataService;
 @RequestMapping("/Template")
 @Api(value="TGH Generator Resource",description="Shows the Generator Info")
 public class TGHGeneratorController {
-	
-//	Long gen_id;
-	
+		
 	
     @Autowired
 	private TGHGeneratorService  tghgeneratorserv;
@@ -81,10 +79,10 @@ public class TGHGeneratorController {
 //			 System.out.println("********************************************************************************************************************");
 			 sender.setGenId(newTGHGenerator.getId());
 			 sender.setSenderId(sender.getSenderId());
-			 
-		 
-		 
+			 		 		 
 			 sender.setGenerator1(newTGHGenerator);
+			 
+			 
 			 		
 			 TGHSender_service.insertSender(sender);
 		 }		
@@ -103,11 +101,7 @@ public class TGHGeneratorController {
 		 
 		 TGHTelegraph tel=new TGHTelegraph();
 		 for(TGHSender sender:Senders) {
-			 for(TGHRecepient recepient:Recepients) {
-//				 tel.setCallerName(newTGHGenerator.getCallerName());
-//				 tel.setGenId(newTGHGenerator.getId());
-//				 tel.setTGHSend_Date(newTGHGenerator.getSendDate());
-				 
+			 for(TGHRecepient recepient:Recepients) {				 
 				 tel.setGenerator3(newTGHGenerator);
 				 tel.setCallerName(newTGHGenerator.getCallerName());
 				 tel.setTGHSend_Date(newTGHGenerator.getSendDate());
@@ -155,11 +149,6 @@ public class TGHGeneratorController {
 //			return tghgeneratorserv.FindAllGenerators();
 //		}
 		
-//   	    @ApiOperation(value="Search Telegraphs by Caller Name")
-//		@GetMapping("/findByName/{CallerName}")
-//		public List<TGHGenerator> getbycallername(@PathVariable String CallerName){
-//			return tghgeneratorserv.FindbyCallerName(CallerName);
-//		}
    	    
    	    @ApiOperation(value="Get Gen Id")
 		@GetMapping("/GetGenId")

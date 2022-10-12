@@ -21,6 +21,7 @@ public interface TGHGeneratorRepo extends JpaRepository<TGHGenerator , Long>,Jpa
 //	 @EntityGraph(value="generator-entity-graph")
 //	 Page<TGHGenerator> findAll(int offset,int pagesize,String field);
 	 
+//kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk	 
 	 @Query( value = "SELECT TGH_GENERATOR_SEQ1.nextval from dual",nativeQuery = true)
 	 Long GetNextId();
 
